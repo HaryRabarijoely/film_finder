@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  
+  <link href="style.css" rel="stylesheet">
+  <title>Film Finder</title>
+</head>
+<body>
+  <div class="container py-3">
+    <div class="hidden" id="overlay" onclick="hidePopup()">
+      <div id="popup" class="p-2"></div>
+    </div>
+    <h1 class="text-center">Film Finder</h1>
+    <h3 class="text-center">Vos Films préférés au bout des doigts</h3>
+    <form id="search_form" class="d-flex justify-content-between" onsubmit="event.preventDefault(); findMovie();">
+      <input type="text" id="searched_movie" name="searched_movie" style="width: 80%" class="p-2">
+      <input type="submit" value="Chercher" style="width: 20%" class="btn btn-primary">
+    </form>
+    <div id="movie_list"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css" integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX" crossorigin="anonymous">
+  <script src="apikey.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
