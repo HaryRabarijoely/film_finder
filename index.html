@@ -11,7 +11,7 @@
   <title>Film Finder</title>
 </head>
 <body>
-  <div class="container py-3">
+  <div class="container py-3" data-aos="zoom-out-down">
     <div class="hidden" id="overlay" onclick="hidePopup()">
       <div id="popup" class="p-2"></div>
     </div>
@@ -21,12 +21,17 @@
       <input type="text" id="searched_movie" name="searched_movie" style="width: 80%" class="p-2">
       <input type="submit" value="Chercher" style="width: 20%" class="btn btn-primary">
     </form>
-    <div id="movie_list"></div>
+    <div id="movie_list" ></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css" integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX" crossorigin="anonymous">
-  <script src="apikey.js"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!--<script src="apikey.js"></script> -->
   <script src="script.js"></script>
 </body>
 </html>

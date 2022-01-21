@@ -9,7 +9,7 @@
 //const apiKey = client.log(process.env.APIKEY);
 //const apiKey = clé;
 //const apiKey = "1d998543";
-//const apiKey = prompt('Aboule ta clé API avant de faire joujou!')
+const apiKey = prompt('Aboule ta clé API avant de faire joujou!')
 
 
 let options = {
@@ -39,7 +39,7 @@ let observer = new IntersectionObserver(intersectionCallback, options);
 
 const findMovie = async () => {
   let search = document.getElementById("searched_movie").value;
-  const response = await fetch(`https://www.omdbapi.com/?apikey=${myApiKey}&s=${search}&type=movie`);
+  const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${search}&type=movie`);
   const data = await response.json();
   displayResults(data.Search);
 
@@ -78,7 +78,7 @@ const movieCard = (movie, n) => {
 
 const detailMovie = async (movie) => {
   document.getElementById("overlay").classList.remove("hidden");
-  const detailresponse = await fetch(`https://www.omdbapi.com/?apikey=${myApiKey}&i=${movie}`);
+  const detailresponse = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`);
   const detaildata = await detailresponse.json();
   document.getElementById("popup").innerHTML = detailCard(detaildata);
 }
